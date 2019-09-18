@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Mystery Word</title>
+    <script src='index.js' defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        .message,
+        #results {
+            display: none;
+        }
+
+        div {
+            padding: 10px 0;
+        }
+
+        #winMessage {
+            color: green;
+        }
+
+        #loseMessage {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mystery Word</h1>
+
+    <div>
+        Please enter one letter:<br>
+        <input type="text" name="letter" id="letter" maxlength="1"><br>
+    </div>
+
+    <button id='newWord'>New word!</button>
+    <button id='enterBtn'>Enter!</button>
+
+    <div id='results'>
+        The coin landed on <span id='flipMessage'></span>.
+        <div id='winMessage' class='message'>You won the toss! :-)</div>
+        <div id='loseMessage' class='message'>You lost the toss :-(</div>
+    </div>
+    <br>
+    The answer is:
+    <span id='answer'></span>
+    <br>
+    The guess result is:
+    <span id='result'></span>
+    <br>
+    The number of tries is:
+    <span id='tries'></span>
+    <br>
+    <span id='match'></span>
+
+</body>
+
+</html>
