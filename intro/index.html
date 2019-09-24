@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mystery Word</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src='index.js' defer></script>
+
+
+  <style>
+    .message,
+    #results {
+      display: none;
+    }
+
+    div {
+      padding: 10px 0;
+    }
+
+    #winMessage {
+      color: green;
+    }
+
+    #loseMessage {
+      color: red;
+    }
+
+    [v-cloak] {
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Intro</h1>
+  <div id='app' v-cloak>
+    <label>What's your name: <input type='text' v-model='playerName'></label>
+    <p v-if='playerName != null'>Player Name: {{playerName}}</p>
+
+    <label>Guess the number <input type='text' v-model='guess'></label>
+    <button v-on:click="guesses.push(guess)">Guess</button>
+
+    <ul>
+      <li v-for='thisGuess in guesses'>{{ thisGuess }}</li>
+    </ul>
+
+    <label>What's your character name: <input type='text' v-model='characterName'></label>
+    <p v-if='characterName != null'>Character Name: {{characterName}}</p>
+
+    <label>Class & Level: <input type='text' v-model='classAndlevel'></label>
+    <p v-if='classAndlevel != null'>Class and level: {{classAndlevel}}</p>
+
+    <label>Background: <input type='text' v-model='background'></label>
+    <p v-if='background != null'>Background: {{background}}</p>
+
+    <label>Race: <input type='text' v-model='race'></label>
+    <p v-if='race != null'>Race: {{race}}</p>
+
+    <label>Alignment: <input type='text' v-model='alignment'></label>
+    <p v-if='alignment!=null'>Alignment:{{alignment}}</p>
+
+    <label>Experience points: <input type='text' v-model=experiencePoints></label>
+    <p v-if='experiencePoints!= null'>Experience points: {{experiencePoints}}</p>
+
+    <label>Other proficiencies and languages: <input type='text' v-model='proficiencies'></label>
+    <button v-on:click='otherProficienciesAndLanguages.push(proficiencies)'>Add</button>
+
+    <ul>
+      <li v-for='p in otherProficienciesAndLanguages'>{{p}}</li>
+    </ul>
+
+    <label>Equipment and character notes: <input type='text' v-model='equip'></label>
+    <button v-on:click='equipments.push(equip)'>Add</button>
+
+    <ul>
+      <li v-for='e in equipments'>{{e}}</li>
+    </ul>
+
+    <label>Attacks & Spellcasting<input type='text' v-model='attack'></label>
+    <button v-on:click='attacks.push(attack)'>Add</button>
+    <ul>
+      <li v-for='a in attacks'>{{a}}</li>
+    </ul>
+
+    <label>Features & Traits <input type='text' v-model='feature'></label>
+    <button v-on:click='features.push(feature)'>Add</button>
+
+    <ul>
+      <li v-for='f in features'>{{f}}</li>
+    </ul>
+
+  </div>
+
+</body>
+
+</html>
