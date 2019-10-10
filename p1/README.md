@@ -1,7 +1,7 @@
 
 # Project 1
 + By: Catherine Lin
-+ Production URL: <http://p1.yourdomain.com>
++ Production URL: <http://p1.vanillacandy.me/>
 
 ## Outside resources
 
