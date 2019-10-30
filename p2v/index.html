@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Drawing Game</title>
+
+  <script src='js/index.js' defer></script>
+
+  <style>
+    .probability {
+      font-family: consolas;
+      font-size: 25px;
+      color: orange;
+    }
+
+    [v-cloak] {
+      display: none;
+    }
+
+    .feedback {
+      display: inline-block;
+      padding: 5px;
+      margin: 10px 0;
+      color: blueviolet;
+      font-weight: bold;
+    }
+
+    ul#players li {
+      display: inline;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .winner {
+      color: green;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script type='text/x-template' id='round-detail'>
+    <div>
+      <ul>
+        <li>Round #: {{ number }}</li>
+        <li>Winner : {{ winner }}</li>
+        <li>Stat : {{ stat }}</li>
+      </ul>
+      <button @click="$emit('delete-round', number)">Delete round</button>
+    </div>
+  </script>
+  <h1>Drawing Game</h1>
+  <div id='app' v-cloak>
+    <div v-if='gameMode == "start"'>
+      <label for='name'>Enter your player name:</label>
+      <input type='text' id='name' v-model='name' @keyup.enter='addPlayer'>
+      <button @click='addPlayer'>Add players!</button>
+      <button @click='playGame'>Lets play!</button>
+    </div>
+    <ul>
+      <li v-for='p in players'>{{p}}</li>
+    </ul>
+
+
+    <div v-if='gameMode == "play"' class=feedback>
+      <div v-if='error' :class="{ error : isError}">
+        <p>{{error}}</p>
+        <button @click='startGame'>Restart</button>
+      </div>
+      <div v-else>
+        <round-detail v-for='round in rounds' @delete-round='deleteRound($event)' :number='round.number'
+          :winner='round.winner' :stat='round.stat' :players='round.players' :key='round.number'>
+        </round-detail>
+        <button @click='startGame'>Play again</button>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
