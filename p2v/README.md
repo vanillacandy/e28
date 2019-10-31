@@ -1,5 +1,5 @@
 # Project 2
-+ By: *your first and last name*
++ By: Catherine Lin
 + Production URL: <http://p2.vanillacandy.me/>
 
 ## Build strategy
