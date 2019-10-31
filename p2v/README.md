@@ -1,11 +1,10 @@
 # Project 2
 + By: *your first and last name*
-+ Production URL: <http://p2.yourdomain.com>
-+ Production URL alt: <http://p2-alt.yourdomain.com> *Remove if not applicable*
++ Production URL: <http://p2.vanillacandy.me/>
 
 ## Build strategy
 *Put an x in the build strategy you used. Put an x in each if you tackled both.*
-+ [ X] Integrated
++ [ X0op-] Integrated
 + [ ] Comprehensive
 
 ## Outside resources

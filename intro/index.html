@@ -38,7 +38,7 @@
   <h1>Intro</h1>
   <div id='app' v-cloak>
     <label>What's your name: <input type='text' v-model='playerName'></label>
-    <p v-if='playerName != null'>Player Name: {{playerName}}</p>
+    <p v-show='playerName != null'>Player Name: {{playerName}}</p>
 
     <label>Guess the number <input type='text' v-model='guess'></label>
     <button v-on:click="guesses.push(guess)">Guess</button>
@@ -48,22 +48,22 @@
     </ul>
 
     <label>What's your character name: <input type='text' v-model='characterName'></label>
-    <p v-if='characterName != null'>Character Name: {{characterName}}</p>
+    <p v-show='characterName'>Character Name: {{characterName}}</p>
 
     <label>Class & Level: <input type='text' v-model='classAndlevel'></label>
-    <p v-if='classAndlevel != null'>Class and level: {{classAndlevel}}</p>
+    <p v-show='classAndlevel'>Class and level: {{classAndlevel}}</p>
 
     <label>Background: <input type='text' v-model='background'></label>
-    <p v-if='background != null'>Background: {{background}}</p>
+    <p v-show='background'>Background: {{background}}</p>
 
     <label>Race: <input type='text' v-model='race'></label>
-    <p v-if='race != null'>Race: {{race}}</p>
+    <p v-show='race'>Race: {{race}}</p>
 
     <label>Alignment: <input type='text' v-model='alignment'></label>
-    <p v-if='alignment!=null'>Alignment:{{alignment}}</p>
+    <p v-show='alignment'>Alignment:{{alignment}}</p>
 
     <label>Experience points: <input type='text' v-model=experiencePoints></label>
-    <p v-if='experiencePoints!= null'>Experience points: {{experiencePoints}}</p>
+    <p v-show='experiencePoints'>Experience points: {{experiencePoints}}</p>
 
     <label>Other proficiencies and languages: <input type='text' v-model='proficiencies'></label>
     <button v-on:click='otherProficienciesAndLanguages.push(proficiencies)'>Add</button>
@@ -92,7 +92,6 @@
       <li v-for='f in features'>{{f}}</li>
     </ul>
 
-  </div>
 
 </body>
 
