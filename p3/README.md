@@ -3,7 +3,7 @@ _Any instructions/notes in italics should be removed from the template before su
 # Project 3
 
 - By: Catherine Lin
-- Production URL: <http://p3.yourdomain.com>
+- Production URL: <http://p3.vanillacandy.me/>
 
 ## Outline of features
 
