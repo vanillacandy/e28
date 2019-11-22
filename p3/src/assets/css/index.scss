@@ -59,11 +59,11 @@ GENERAL PAGE LAYOUT/DESIGN
     width: 100%;
     margin: auto;
     padding-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 header {
-    text-align: center;
+    text-align: left;
     margin-top: 20px;
 }
 
@@ -86,11 +86,11 @@ nav ul {
             padding: 5px;
             margin: 5px;
             cursor: pointer;
-            color: $blue;
+            color: $gray;
         }
 
         a:hover {
-            background-color: $blue;
+            background-color: $yellow;
             color: white;
             text-decoration: none;
         }
@@ -113,10 +113,10 @@ PAGE SPECIFIC
 -----------------------------------------------------*/
 #products {
     .product {
-        width: 75%;
-        margin: auto;
+        width: 150px;
+        margin: 0;
         margin-bottom: 20px;
-        border: 1px solid black;
+        border: 2px solid purple;
         padding: 20px;
 
         .product-name {
@@ -130,17 +130,12 @@ PAGE SPECIFIC
         }
 
         .product-description {
-            width: 75%;
+            width: 0;
             margin: auto;
             text-align: left;
-            font-style: italic;
+            font-style: Stencil;
         }
 
-        .product-price {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-weight: bold;
-            font-size: 2.0rem;
-        }
     }
 }
 
@@ -164,7 +159,8 @@ PAGE SPECIFIC
     }
 
     button {
-        display: block;
+        background-color: $teal;
+        display: inline-block;
         margin: 10px auto;
         font-size: 2rem;
     }
@@ -179,7 +175,7 @@ MISC
 }
 
 .alert {
-    background-color: $green;
+    background-color: $aqua;
     color: white;
     border-radius: $radius;
     font-weight: bold;

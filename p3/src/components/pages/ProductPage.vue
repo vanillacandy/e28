@@ -3,12 +3,13 @@
         <h1>Title: {{ product.name }}</h1>
         <p class='id'>Joke #{{ product.id }}</p>
         <p class='description'>{{ product.description }}</p>
-        <p class='categories'>{{ product.categories }}</p>
+        <p class='categories'>Category: {{ product.categories }}</p>
         
         <button @click='addToCart(product.id)'>Add to cart</button>
         <transition name='fade'>
             <div class='alert' v-if='addAlert'>Your cart has been updated!</div>
         </transition>
+        <br/>
         <router-link :to='"/products"'>&larr; Return to all jokes</router-link>
     </div>
 </template>
