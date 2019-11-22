@@ -15,14 +15,16 @@ import { products } from './../products.js';
 export default {
   // src/components/ShowFeatured.vue
   name: 'ShowFeatured',
-
-  computed: {
-    featuredProducts: function() {
-      function isMatch(product) {
-        return product.categories.includes(this);
+  methods: {
+      featuredProducts: function() {
+        function isMatch(product) {
+          return product.categories.includes(this);
+        }
+        return this.products.filter(isMatch, this.category);
       }
-      return this.products.filter(isMatch, this.category);
-    }
+  },
+  computed: {
+    
   },
   props: ['category'],
   data: function() {

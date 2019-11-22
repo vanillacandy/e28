@@ -29,7 +29,8 @@ export default {
     mounted() {
         this.products = axios
             .get(
-                'https://my-json-server.typicode.com/susanBuck/e28-zipfoods-api/jokes'
+                'https://my-json-server.typicode.com/vanillacandy/e28-api/jokes'
+                
             )
             .then(response => {
                 this.products = response.data;

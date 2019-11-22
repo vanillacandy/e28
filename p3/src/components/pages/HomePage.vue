@@ -2,7 +2,6 @@
     <div>
         <p>GoodJoke website a website for joke research. </p>
 
-        <show-featured :category='featuredCategory'></show-featured>
     </div>
 </template>
 
