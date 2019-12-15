@@ -1,11 +1,11 @@
 <template>
     <div id='product-page' v-if='product'>
-        <h1>Title: {{ product.name }}</h1>
+        <h1 data-test='product-name'>Title: {{ product.name }}</h1>
         <p class='id'>Joke #{{ product.id }}</p>
         <p class='description'>{{ product.description }}</p>
         <p class='categories'>Category: {{ product.categories }}</p>
         
-        <button @click='addToCart(product.id)'>Add to cart</button>
+        <button data-test='add-to-cart-button' @click='addToCart(product.id)'>Add to cart</button>
         <transition name='fade'>
             <div class='alert' v-if='addAlert'>Your cart has been updated!</div>
         </transition>

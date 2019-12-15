@@ -9,11 +9,11 @@
 Requirements
 Your P4 should meet all the same specifications as P3, with the following additions:
 
-- (Week 12) State management w/ Vuex
+- (Week 12) State management w/ Vuex *
 At least one data entity of your app should be managed via a Vuex store
-- (Week 12) Testing
+- (Week 12) Testing *
 At least one passing unit test
-- Passing E2E testing for all features
+- Passing E2E testing for all features *
 (Week 13) Form validation using Vuelidate
 (Week 13) Deployed on Netlify with a custom domain of http://p4.yourdomain.com
 Improvements based on feedback from the P3 peer review (if applicable)

@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Categories</h2>
-        <ul class='cleanList'>
+        <ul data-test='category-name' class='cleanList'>
             <li v-for='(category, id) in categories' :key='id'>{{ category }}</li>
         </ul>
     </div>
