@@ -1,9 +1,9 @@
 <template>
     <div>
         <h2>Categories</h2>
-        <ul data-test='category-name' class='cleanList'>
-            <li v-for='(category, id) in categories' :key='id'>{{ category }}</li>
-        </ul>
+        <b-list-group data-test='category-name' class='cleanList'>
+            <b-list-group-item v-for='(category, id) in categories' :key='id'>{{ category }}</b-list-group-item>
+        </b-list-group>
     </div>
 </template>
 <script>

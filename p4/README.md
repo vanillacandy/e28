@@ -15,7 +15,7 @@ At least one data entity of your app should be managed via a Vuex store
 At least one passing unit test
 - Passing E2E testing for all features *
 (Week 13) Form validation using Vuelidate
-(Week 13) Deployed on Netlify with a custom domain of http://p4.yourdomain.com
+- (Week 13) Deployed on Netlify with a custom domain of https://optimistic-engelbart-b56b19.netlify.com
 Improvements based on feedback from the P3 peer review (if applicable)
 
 

@@ -8,6 +8,7 @@ export default new Vuex.Store({
     state: {
         cartCount: 0,
         products: [],
+        contacts: [],
     },
     mutations: {
         setCartCount(state, payload) {
@@ -18,12 +19,23 @@ export default new Vuex.Store({
         },
         setProducts(state, payload) {
             state.products = payload;
+        },
+        setContacts(state, payload) {
+            state.contacts = payload;
+        },
+        addContact(state, payload) {
+            _.merge(state.contacts, payload)
         }
     },
     actions: {
         setProducts(context) {
             app.axios.get(app.config.api + 'jokes').then(response => {
                 context.commit('setProducts', response.data);
+            });
+        },
+        setContacts(context) {
+            app.axios.get('https://e28-p4-d52ea.firebaseio.com/contacts.json').then(response => {
+                context.commit('setContacts', response.data);
             });
         }
     },
