@@ -1,6 +1,6 @@
 <template>
     <div id='product-create'>
-        <h1>Add a contact</h1>
+        <h2>Add a contact</h2>
         <p>You can choose to add more contact at create page</p>
         
         <form @submit.prevent='handleSubmit'>
