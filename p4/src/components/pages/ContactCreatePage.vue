@@ -1,6 +1,8 @@
 <template>
     <div id='product-create'>
         <h1>Add a contact</h1>
+        <p>You can choose to add more contact at create page</p>
+        
         <form @submit.prevent='handleSubmit'>
             
             <div class='form-group'>
@@ -18,16 +20,26 @@
                         v-if='!$v.product.name.required'
                     >Name is required.</div>
                 </div>
-                <div class='form-group'>
-                    <label for='email'>Email</label>
 
-                    <b-form-input
-                        type='text'
-                        id='email'
-                        data-test='product-categories-input'
-                        v-model='product.email'
-                    />
+                <b-form-group for='email'>Email</b-form-group>
+                <b-form-input
+                    type='text'
+                    :class='{ "form-input-error": $v.product.email.$error }'
+                    data-test='product-email-input'
+                    id='email'
+                    v-model='$v.product.email.$model'
+                />
+                <div v-if='$v.product.email.$error'>
+                    <div
+                            class='form-feedback-error'
+                            v-if='!$v.product.email.required'
+                        >Email is required.</div>
+                    <div
+                            class='form-feedback-error'
+                            v-if='!$v.product.email.email'
+                        >Please enter a email format.</div>    
                 </div>
+
 
             </div>
 
@@ -40,7 +52,7 @@
 
 <script>
 import * as app from './../../app.js';
-import { required } from 'vuelidate/lib/validators';
+import { required , email} from 'vuelidate/lib/validators';
 
 let product = {};
 // If in dev mode, we'll pre-fill the product to make demo/testing easier
@@ -52,6 +64,7 @@ if (process.env.NODE_ENV == 'development') {
 } else {
     product = {
         name: '',
+        email: '',
     };
 }
 
@@ -67,7 +80,11 @@ export default {
         product: {
             name: {
                 required
-            }
+            },
+            email: {
+                required,
+                email
+            },
         }
     },
     watch: {

@@ -1,6 +1,7 @@
 <template>
   <div id="products">
     <h2>Contacts</h2>
+    <p>This page contains a list of email contacts you can send your favorite jokes</p>
     <show-contact
       v-for="contact in contacts"
       :key="contact.id"
