@@ -2,12 +2,11 @@
 # Project 3
 
 - By: Catherine Lin
-- Production URL: <http://p3.vanillacandy.me/>
+- Production URL: <https://p4.vanillacandy.me/>
 
 ## Outline of features
 
 Requirements
-Your P4 should meet all the same specifications as P3, with the following additions:
 
 - (Week 12) State management w/ Vuex *
 At least one data entity of your app should be managed via a Vuex store
